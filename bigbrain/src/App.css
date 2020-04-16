@@ -1,0 +1,14 @@
+html,
+body {
+    background: rgb(220, 231, 239);
+    min-height: 100%;
+}
+
+.root {
+    min-height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+}
