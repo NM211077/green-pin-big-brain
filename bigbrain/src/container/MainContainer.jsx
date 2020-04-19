@@ -1,13 +1,17 @@
 import React, { Component } from "react";
-import { MainMap } from "../components/MainMap/MainMap";
-import { ButtonPlus } from "../components/MainMap/Button/ButtonMainPlus";
+
+import { ButtonPlus } from "../components/Button/ButtonMainPlus";
+import { MapContainer } from "./MapContainer";
 
 export class MainContainer extends Component {
+  google = "https://api.google.com/some/script.js";
+
   render() {
     return (
       <div className="main">
-        <MainMap />
-        <ButtonPlus />
+        <MapContainer google={this.google} />
+
+<ButtonPlus />
       </div>
     );
   }
