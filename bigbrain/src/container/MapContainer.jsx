@@ -26,5 +26,5 @@ export const MyMapComponent = compose(
   <GoogleMap
     defaultZoom={13}
     defaultCenter={{ lat: 49.990159, lng: 36.233081 }}
-  ></GoogleMap>
+  />
 ));
