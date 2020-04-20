@@ -8,7 +8,9 @@ import {
 
 import { compose, withProps } from "recompose";
 
-//API KEY AIzaSyBIHu3UtN5LFuO9rEQuFLaSAiStv6VB3Qs 
+/*API KEY AIzaSyBIHu3UtN5LFuO9rEQuFLaSAiStv6VB3Qs
+ With api key not working  
+"https://maps.googleapis.com/maps/api/js?key=AIzaSyBIHu3UtN5LFuO9rEQuFLaSAiStv6VB3Qs=3.exp&libraries=geometry,drawing,places",*/
 
 export const MyMapComponent = compose(
   withProps({
@@ -21,13 +23,8 @@ export const MyMapComponent = compose(
   withScriptjs,
   withGoogleMap
 )((props) => (
-  <GoogleMap defaultZoom={8} defaultCenter={{ lat: 49.990159, lng: 36.233081 }}>
-    {props.isMarkerShown && (
-      <Marker
-        zoom="8"
-        position={{ lat: -34.397, lng: 150.644 }}
-        onClick={props.onMarkerClick}
-      />
-    )}
-  </GoogleMap>
+  <GoogleMap
+    defaultZoom={13}
+    defaultCenter={{ lat: 49.990159, lng: 36.233081 }}
+  ></GoogleMap>
 ));
