@@ -9,7 +9,7 @@ import {
 import { compose, withProps } from "recompose";
 
 /*API KEY AIzaSyBIHu3UtN5LFuO9rEQuFLaSAiStv6VB3Qs
- With api key not working  
+ With apiKey not working 
 "https://maps.googleapis.com/maps/api/js?key=AIzaSyBIHu3UtN5LFuO9rEQuFLaSAiStv6VB3Qs=3.exp&libraries=geometry,drawing,places",*/
 
 export const MyMapComponent = compose(

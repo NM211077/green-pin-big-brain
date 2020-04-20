@@ -8,7 +8,6 @@ export class MainContainer extends Component {
     return (
       <div className="main">
         <MyMapComponent />
-
         {/* <ButtonPlus /> */}
       </div>
     );
