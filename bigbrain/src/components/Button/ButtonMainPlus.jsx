@@ -1,12 +1,13 @@
 import React from "react";
-import Button from "muicss/lib/react/button";
+import Button from "react-bootstrap/Button";
 
-import st from "./ButtonPlus.module.css";
+// import "bootstrap/scss/bootstrap.scss";
+// import "../../assets/style/index.sass";
 
 export function ButtonPlus() {
   return (
-    <div className={st.buttonPlus}>
-      <Button className={st.btn} variant="raised" color="primary">
+    <div className="buttonPlus">
+      <Button className="btnt" active="false">
         <p>Report a problem</p>
       </Button>
     </div>

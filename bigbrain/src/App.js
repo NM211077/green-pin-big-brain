@@ -1,5 +1,6 @@
 import React from "react";
-import "./App.css";
+
+import "./App.sass";
 
 import { MainContainer } from "./container/MainContainer";
 import { ButtonPlus } from "./components/Button/ButtonMainPlus";
