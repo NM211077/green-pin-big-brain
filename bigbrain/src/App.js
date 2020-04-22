@@ -1,14 +1,12 @@
 import React from "react";
-import "./App.css";
 
-import { MainContainer } from "./container/MainContainer";
-import { ButtonPlus } from "./components/Button/ButtonMainPlus";
+import { MainContainer, HeaderContainer } from "./container/index.js";
 
 function App() {
   return (
     <div>
       <MainContainer />
-      <ButtonPlus />
+      <HeaderContainer />
     </div>
   );
 }
