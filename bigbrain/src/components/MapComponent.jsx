@@ -11,7 +11,17 @@ export const MapComponent = compose(
       "https://maps.googleapis.com/maps/api/js?v=weekly&key=AIzaSyBIHu3UtN5LFuO9rEQuFLaSAiStv6VB3Qs",
 
     loadingElement: <div style={{ height: `100%` }} />,
-    containerElement: <div style={{ height: `100vh` }} />,
+    containerElement: (
+      <div
+        style={{
+          position: `absolute`,
+          height: `90vh`,
+          left: `40px`,
+          right: `40px`,
+          top: `79px`,
+        }}
+      />
+    ),
     mapElement: <div style={{ height: `100%` }} />,
   }),
   withScriptjs,
