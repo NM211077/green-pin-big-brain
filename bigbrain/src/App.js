@@ -1,14 +1,14 @@
 import React from "react";
-import "./App.css";
 
-import { MainContainer } from "./container/MainContainer";
-import { ButtonPlus } from "./components/Button/ButtonMainPlus";
+import { MainContainer, HeaderContainer } from "./container/index.js";
+import "./assets/style/index.sass";
+import "./assets/icon/css/fontello.css";
 
 function App() {
   return (
     <div>
+      <HeaderContainer />
       <MainContainer />
-      <ButtonPlus />
     </div>
   );
 }
