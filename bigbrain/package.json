@@ -19,6 +19,7 @@
     "react-google-maps": "^9.4.5",
     "react-google-maps-api": "^1.0.8",
     "react-iframe": "^1.8.0",
+    "react-modal": "^3.11.2",
     "react-redux": "^7.2.0",
     "react-router-dom": "^6.0.0-alpha.3",
     "react-scripts": "3.4.1",
