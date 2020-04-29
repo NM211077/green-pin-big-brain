@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import { MapComponent, ButtonPlus } from "../components/index.js";
 import axios from 'axios';
+import ReactModal from 'react-modal';
 
 
 const API_URL = 'https://arcane-eyrie-30848.herokuapp.com';
@@ -9,10 +10,11 @@ const API_URL = 'https://arcane-eyrie-30848.herokuapp.com';
 export class MainContainer extends Component {
     state = {
         pin: [],
+        showModal: false
     }
 
     componentDidMount() {
-        const url = `${API_URL}/api/v1/`;
+        const url = `${API_URL}/api/v1/pin/`;
         return axios.get(url)
             .then(response => response.data)
             .then(result => {console.log('result',result)
@@ -21,15 +23,23 @@ export class MainContainer extends Component {
             });
     }
 
+    handleModal = () => {
+        this.setState({showModal: !this.state.showModal});
+    }
   render() {
       const pin = this.state.pin;
       console.log(pin);
+      const nameBtn ='Button';
     return (
       <div className="main">
         <MapComponent
             pin={pin}
         />
-        <ButtonPlus />
+
+        <ButtonPlus
+            onClickBtn = {this.handleModal.bind(this)}
+        />
+
       </div>
     );
   }
