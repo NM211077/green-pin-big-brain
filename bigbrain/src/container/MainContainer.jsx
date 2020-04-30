@@ -23,7 +23,7 @@ export class MainContainer extends Component {
   }
     state = {
         pin: [],
-        showModal: false
+
     }
 
     componentDidMount() {
@@ -49,9 +49,9 @@ const {pin} = this.state
             pin={pin}
         />
 
-        <ButtonPlus
+        {/*<ButtonPlus
             onClickBtn = {this.handleModal.bind(this)}
-        />
+        />*/}
       </div>
     );
   }
