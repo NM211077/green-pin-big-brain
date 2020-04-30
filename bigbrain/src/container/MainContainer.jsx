@@ -49,9 +49,9 @@ const {pin} = this.state
             pin={pin}
         />
 
-        <ButtonPlus
+        {/*<ButtonPlus
             onClickBtn = {this.handleModal.bind(this)}
-        />
+        />*/}
       </div>
     );
   }
