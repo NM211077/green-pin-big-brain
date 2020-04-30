@@ -23,7 +23,7 @@ export class MainContainer extends Component {
   }
     state = {
         pin: [],
-        showModal: false
+
     }
 
     componentDidMount() {
