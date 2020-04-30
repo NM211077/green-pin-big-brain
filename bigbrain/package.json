@@ -1,4 +1,5 @@
 {
+  "homepage": "http://NM211077.github.io/green-pin-big-brain",
   "name": "bigbrain",
   "version": "0.1.0",
   "private": true,
@@ -28,6 +29,8 @@
     "sass": "^1.26.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -47,5 +50,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "express": "^4.17.1",
+    "express-favicon": "^2.0.1",
+    "path": "^0.12.7"
   }
 }

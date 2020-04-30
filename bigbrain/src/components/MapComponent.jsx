@@ -7,6 +7,7 @@ import {
 } from "react-google-maps";
 
 import { compose, withProps } from "recompose";
+//import cuttingDown from "../assets/icon/cuttingDown.png";
 
 /*API KEY AIzaSyBIHu3UtN5LFuO9rEQuFLaSAiStv6VB3Qs*/
 let icon;
@@ -39,7 +40,7 @@ export const MapComponent = compose(
     {props.pin.map(
       (elem) => (
         elem.category === 1
-          ? (icon = "вырубка.png")
+          ? icon = require("../assets/icon/cuttingDown.png")
           : elem.category === 2
           ? (icon = "мусор.png")
           : elem.category === 3
@@ -49,11 +50,11 @@ export const MapComponent = compose(
           : elem.category === 5
           ? (icon = "карьер.png")
           : elem.category === 6
-          ? (icon = "СТРОЙКА.png")
+          ? icon = require("../assets/icon/constructionHouse.png")
           : elem.category === 7
           ? (icon = "растения.png")
           : elem.category === 8
-          ? (icon = "браконьерство.png")
+          ? icon = require("../assets/icon/poaching.png")
           : (icon = "base.png"),
         !Array.isArray(elem.geo)
           ? (pos = elem.geo.split(","))
@@ -62,7 +63,6 @@ export const MapComponent = compose(
           let number = Number(item);
           return isNaN(number) ? item : number;
         })),
-        (
           <Marker
             key={props.pin.id}
             position={{ lat: posNum[0], lng: posNum[1] }}
@@ -72,7 +72,7 @@ export const MapComponent = compose(
               scaledSize: new window.google.maps.Size(26, 32),
             }}
           />
-        )
+
       )
     )}
   </GoogleMap>

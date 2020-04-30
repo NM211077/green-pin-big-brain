@@ -1,8 +1,5 @@
 import React, { Component } from "react";
-import axios from "axios";
-
 import { MapComponent, ButtonPlus } from "../components/index.js";
-
 import axios from 'axios';
 import ReactModal from 'react-modal';
 
@@ -45,7 +42,7 @@ export class MainContainer extends Component {
 
 const {pin} = this.state
       console.log(pin);
-      const nameBtn ='Button';
+
     return (
       <div className="main">
         <MapComponent
