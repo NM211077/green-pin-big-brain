@@ -42,20 +42,20 @@ export const MapComponent = compose(
         elem.category === 1
           ? icon = require("../assets/icon/cuttingDown.png")
           : elem.category === 2
-          ? (icon = "мусор.png")
+          ? icon = require("../assets/icon/dump.png")
           : elem.category === 3
-          ? (icon = "костер.png")
+          ? icon = require("../assets/icon/setFire.png")
           : elem.category === 4
-          ? (icon = "огонь.png")
+          ? icon = require("../assets/icon/fire.png")
           : elem.category === 5
-          ? (icon = "карьер.png")
+          ? icon =require("../assets/icon/quarry.png")
           : elem.category === 6
           ? icon = require("../assets/icon/constructionHouse.png")
           : elem.category === 7
-          ? (icon = "растения.png")
+          ? icon = require("../assets/icon/plants.png")
           : elem.category === 8
           ? icon = require("../assets/icon/poaching.png")
-          : (icon = "base.png"),
+          : icon = require("../assets/icon/base.png"),
         !Array.isArray(elem.geo)
           ? (pos = elem.geo.split(","))
           : (pos = elem.geo),

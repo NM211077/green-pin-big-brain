@@ -3,8 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="2fa4b02b-8017-4eae-b1b5-b9f3c41181a8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bigbrain/src/container/MainContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/bigbrain/src/container/MainContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bigbrain/public/base.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bigbrain/public/вырубка.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bigbrain/public/карьер.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bigbrain/public/костер.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bigbrain/public/мусор.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bigbrain/public/огонь.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bigbrain/public/растения.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bigbrain/src/components/MapComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/bigbrain/src/components/MapComponent.jsx" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +25,8 @@
       <file leaf-file-name="MapComponent.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bigbrain/src/components/MapComponent.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-343">
-              <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+            <state relative-caret-position="1122">
+              <caret line="59" column="39" lean-forward="true" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -35,8 +43,8 @@
       <file leaf-file-name="MainContainer.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bigbrain/src/container/MainContainer.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="53" column="13" selection-start-line="51" selection-start-column="8" selection-end-line="53" selection-end-column="13" />
+            <state relative-caret-position="352">
+              <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -55,6 +63,9 @@
       </map>
     </option>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="dummy://restClient/response5.json" root0="SKIP_INSPECTION" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -64,8 +75,8 @@
         <option value="$PROJECT_DIR$/bigbrain/src/components/ButtonMainPlus.jsx" />
         <option value="$PROJECT_DIR$/bigbrain/src/components/ModalStep1.css" />
         <option value="$PROJECT_DIR$/bigbrain/package.json" />
-        <option value="$PROJECT_DIR$/bigbrain/src/components/MapComponent.jsx" />
         <option value="$PROJECT_DIR$/bigbrain/src/container/MainContainer.jsx" />
+        <option value="$PROJECT_DIR$/bigbrain/src/components/MapComponent.jsx" />
       </list>
     </option>
   </component>
@@ -133,6 +144,21 @@
               <item name="BOOT_CAMP" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="bigbrain" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="BOOT_CAMP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BOOT_CAMP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bigbrain" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="icon" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="BOOT_CAMP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BOOT_CAMP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bigbrain" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="components" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -163,6 +189,32 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://arcane-eyrie-30848.herokuapp.com" />
+          <option name="urlPath" value="/api/v1/pin" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -190,7 +242,7 @@
       <workItem from="1588103803863" duration="6067000" />
       <workItem from="1588187500502" duration="14436000" />
       <workItem from="1588248213228" duration="2958000" />
-      <workItem from="1588265411862" duration="817000" />
+      <workItem from="1588265411862" duration="4346000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1586795184064</created>
@@ -234,25 +286,41 @@
       <option name="project" value="LOCAL" />
       <updated>1588265511639</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="test">
+      <created>1588266256469</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1588266256469</updated>
+    </task>
+    <task id="LOCAL-00008" summary="test">
+      <created>1588268986480</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1588268986480</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27482000" />
+    <option name="totallyTimeSpent" value="31011000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="52" y="-11" width="1869" height="1092" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22185612" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="REST Client" weight="0.34453782" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.16911764" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.2867647" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22185612" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.2867647" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -277,7 +345,8 @@
     <MESSAGE value="Change api" />
     <MESSAGE value="create host heroku" />
     <MESSAGE value="correct display of markers" />
-    <option name="LAST_COMMIT_MESSAGE" value="correct display of markers" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/bigbrain/src/components/MapComponent.jsx">
@@ -602,15 +671,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bigbrain/src/components/MapComponent.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-343">
-          <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+        <state relative-caret-position="1122">
+          <caret line="59" column="39" lean-forward="true" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bigbrain/src/container/MainContainer.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="53" column="13" selection-start-line="51" selection-start-column="8" selection-end-line="53" selection-end-column="13" />
+        <state relative-caret-position="352">
+          <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
