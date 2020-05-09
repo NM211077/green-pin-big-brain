@@ -5,9 +5,9 @@ import {
   GoogleMap,
   Marker,
 } from "react-google-maps";
-
 import { compose, withProps } from "recompose";
-//import cuttingDown from "../assets/icon/cuttingDown.png";
+
+import { InfoIconProblem } from "./index";
 
 /*API KEY AIzaSyBIHu3UtN5LFuO9rEQuFLaSAiStv6VB3Qs*/
 let icon;
@@ -40,22 +40,22 @@ export const MapComponent = compose(
     {props.pin.map(
       (elem) => (
         elem.category === 1
-          ? icon = require("../assets/icon/cuttingDown.png")
+          ? (icon = require("../assets/icon/cuttingDown.png"))
           : elem.category === 2
-          ? icon = require("../assets/icon/dump.png")
+          ? (icon = require("../assets/icon/dump.png"))
           : elem.category === 3
-          ? icon = require("../assets/icon/setFire.png")
+          ? (icon = require("../assets/icon/setFire.png"))
           : elem.category === 4
-          ? icon = require("../assets/icon/fire.png")
+          ? (icon = require("../assets/icon/fire.png"))
           : elem.category === 5
-          ? icon =require("../assets/icon/quarry.png")
+          ? (icon = require("../assets/icon/quarry.png"))
           : elem.category === 6
-          ? icon = require("../assets/icon/constructionHouse.png")
+          ? (icon = require("../assets/icon/constructionHouse.png"))
           : elem.category === 7
-          ? icon = require("../assets/icon/plants.png")
+          ? (icon = require("../assets/icon/plants.png"))
           : elem.category === 8
-          ? icon = require("../assets/icon/poaching.png")
-          : icon = require("../assets/icon/base.png"),
+          ? (icon = require("../assets/icon/poaching.png"))
+          : (icon = require("../assets/icon/base.png")),
         !Array.isArray(elem.geo)
           ? (pos = elem.geo.split(","))
           : (pos = elem.geo),
@@ -63,17 +63,27 @@ export const MapComponent = compose(
           let number = Number(item);
           return isNaN(number) ? item : number;
         })),
+        (
+          // console.log("d", elem.category),
           <Marker
-            key={props.pin.id}
+            key={elem.category}
             position={{ lat: posNum[0], lng: posNum[1] }}
             /*position ={{lat: elem.geo[0], lng: elem.geo[1]}}*/
             icon={{
               url: icon,
               scaledSize: new window.google.maps.Size(26, 32),
             }}
+            onClick={props.handleClickInfoIcon.bind(elem, elem.category)}
           />
-
+        )
       )
+    )}
+    {props.showInfoIcon && (
+      <InfoIconProblem
+        handleClickInfoIcon={props.handleClickInfoIcon}
+        pin={props.pin}
+        categoryId={props.categoryId}
+      />
     )}
   </GoogleMap>
 ));
