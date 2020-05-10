@@ -1,57 +1,49 @@
 import React, { Component } from "react";
-import { MapComponent, ButtonPlus } from "../components/index.js";
-import axios from 'axios';
-import ReactModal from 'react-modal';
+import axios from "axios";
+import ReactModal from "react-modal";
 
-const API_URL =
-  "https://cors-anywhere.herokuapp.com/https://arcane-eyrie-30848.herokuapp.com";
+
+import { MapComponent, ButtonPlus } from "../components/index.js";
+import { BASE_URL } from "../constans";
 
 export class MainContainer extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pin: [],
+      showModal: false,
+      showInfoIcon: false,
+      categoryId: "",
+    };
+  }
+  componentDidMount() {
+    const url = `${BASE_URL}/api/v1/pin/`;
+    return axios.get(url).then((response) => {
+      this.setState({ pin: response.data });
+    });
+  }
 
-  state = {
-    pin: [],
-    showModal: false,
+  handleClickInfoIcon = (elem, categ) => {
+    this.setState((prevState) => ({
+      showInfoIcon: !prevState.showInfoIcon,
+      categoryId: elem,
+    }));
   };
 
-  componentDidMount() {
-    const url = `${API_URL}/api/v1/pin`;
-    return axios
-      .get(url)
-      .then((response) => response.data)
-      .then((result) => this.setState({ pin: result }))
-      .catch((error) => console.log("error", error));
-  }
-    state = {
-        pin: [],
-
-    }
-
-    componentDidMount() {
-        const url = `${API_URL}/api/v1/pin/`;
-        return axios.get(url)
-            .then(response => response.data)
-            .then(result => {console.log('result',result)
-                
-                this.setState({pin: result});
-            });
-    }
-    handleModal = () => {
-        this.setState({showModal: !this.state.showModal});
-    }
+  handleModal = () => {
+    this.setState({ showModal: !this.state.showModal });
+  };
   render() {
-
-const {pin} = this.state
-      console.log(pin);
-
+    const { pin, showInfoIcon, categoryId } = this.state;
     return (
       <div className="main">
         <MapComponent
-            pin={pin}
+          pin={pin}
+          showInfoIcon={showInfoIcon}
+          handleClickInfoIcon={this.handleClickInfoIcon}
+          categoryId={categoryId}
         />
-
-        <ButtonPlus
-            onClickBtn = {this.handleModal.bind(this)}
-        />
+        <ButtonPlus onClickBtn={this.handleModal.bind(this)} />
       </div>
     );
   }

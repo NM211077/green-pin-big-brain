@@ -1,5 +1,13 @@
 import React, { Component } from "react";
 
+import styled, { keyframes } from "styled-components";
+import { rollOut } from "react-animations";
+import flipInX from "react-animations/lib/flip-in-x";
+
+const Roll = styled.div`
+  animation: 3s ${keyframes`${flipInX}`};
+`;
+
 export function Navbar() {
   return (
     <div className="havbar">
