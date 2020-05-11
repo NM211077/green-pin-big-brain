@@ -1,0 +1,296 @@
+
+
+.modalStep {
+    position: absolute;
+    /*z-index: 1;*/
+    left: 520px;
+    top: 292px;
+    margin: auto;
+    color: red;
+    margin: 0;
+    text-align: center;
+    width: 400px;
+    height: 171px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 16px #CAD2D3;
+    border-radius: 20px;
+}
+
+.modal-close {
+    position: absolute;
+    width: 48px;
+    height: 18px;
+    right: 1px;
+    top: 9px;
+    cursor: pointer;
+    border: none;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: #78B0A0;
+    line-height: 21px;
+    background: #FFFFFF;
+}
+
+
+@media (max-width: 767px) {
+    #modal {
+        max-width: 180px;
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        z-index: 0;
+        /* right: 90px;*/
+        left: 50px;
+        top: 134px;
+        margin: auto;
+    }
+}
+
+.nextStep {
+    position: absolute;
+    width: 160px;
+    height: 40px;
+    left: 120px;
+    top: 91px;
+    background: #518371;
+    border: 1px solid #5E8D7C;
+    box-sizing: border-box;
+    border-radius: 40px;
+    font-family: BPreplay;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+
+}
+
+.modalStepInfo{
+    position: absolute;
+    width: 264px;
+    height: 27px;
+    left: 67px;
+    top: 40px;
+    font-size: 18px;
+    line-height: 27px;
+    color: #000000;
+}
+
+/*#modal {
+    position: absolute;
+    z-index: 0;
+    right: 100px;
+    top: 134px;
+    margin: auto;
+    width: 438px;
+    height: 500px;
+    border:1px solid green;
+}*/
+.modalStep2{
+    position: absolute;
+    width: 438px;
+    height: 839px;
+    right: 100px;
+    top: 84px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 16px #CAD2D3;
+    border-radius: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+}
+.backPrev{
+    /* Back */
+    position: absolute;
+    width: 32px;
+    height: 19px;
+    left: 8px;
+    top: 9px;
+    border:none;
+    font-size: 14px;
+    line-height: 21px;
+    color: #518371;
+    background: #FFFFFF;
+}
+.location{
+    /* Frame 433 */
+
+    position: absolute;
+    width: 390px;
+    height: 48px;
+    left: 24px;
+    top: 40px;
+    padding: 10px;
+    border:none;
+    background: #FFFFFF;
+    box-shadow: 0px -1px 0px #78B0A0;
+    color: #518371;
+
+}
+.nextStepFinish{
+    /* Frame 3 */
+
+    position: absolute;
+    width: 160px;
+    height: 48px;
+    left: 139px;
+    top: 751px;
+    background: #518371;
+    border: 1px solid #518371;
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+.note{
+    /* Frame 434 */
+
+    position: absolute;
+    max-width: 390px;
+    width:100%;
+    height: 64px;
+    left: 24px;
+    top: 219px;
+    background: #F7F7F7;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 21px;
+    margin-top:0px;
+}
+.spanNote {
+    position: absolute;
+    width: 37px;
+    height: 22px;
+    left: 16px;
+    top: 0px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    color: #518371;
+
+}
+.textNote{
+    outline: none;
+    width:330px;
+    height: 60px;
+    border:none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    background: #F7F7F7;
+    padding-left: 50px;
+    white-space: normal;
+}
+
+.description{
+    position: absolute;
+    width: 390px;
+    height: 48px;
+    left: 24px;
+    top: 307px;
+    background: #FFFFFF;
+    box-shadow: 0px -1px 0px #78B0A0;
+    padding: 10px;
+    color: #518371;
+    }
+
+.noteDescription{
+    /* Frame 434 */
+
+    position: absolute;
+    width: 390px;
+    height: 64px;
+    left: 24px;
+    top: 411px;
+    background: #F7F7F7;
+    border-radius: 10px;
+}
+
+
+.spanDescription{
+    /* Note */
+
+    position: absolute;
+    width: 37px;
+    height: 22px;
+    left: 16px;
+    top: 0px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+     color: #518371;
+}
+.textNoteDescription {
+    outline: none;
+    width:330px;
+    height: 60px;
+    border:none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    background: #F7F7F7;
+    padding-left: 50px;
+    white-space: normal;
+}
+
+.selectProblem{
+    position: absolute;
+    outline: none;
+    border:none;
+    width: 390px;
+    height: 40px;
+    left: 24px;
+    top: 355px;
+
+    background: #F7F7F7;
+    border-radius: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: #8194b1;
+}
+
+.addPhoto {
+    position: absolute;
+    width: 390px;
+    height: 48px;
+    left: 24px;
+    top: 498px;
+    padding: 10px;
+    background: #FFFFFF;
+    box-shadow: 0px -1px 0px #78B0A0;
+    font-size: 16px;
+    line-height: 23px;
+    color: #518371;
+}
+
+.addPhoto span{
+    position: absolute;
+    width: 74px;
+    height: 27px;
+    left: 40px;
+    top: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+.dropPhoto {
+    position: absolute;
+    width: 390px;
+    height: 94px;
+    left: 10px;
+    top: 50px;
+}

@@ -2,15 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fa4b02b-8017-4eae-b1b5-b9f3c41181a8" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/bigbrain/src/components/ModalReport/ImageUpload.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bigbrain/src/components/ModalReport/ImageUpload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bigbrain/src/components/ModalReport/MapComponentReport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bigbrain/src/components/ModalReport/Modal.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bigbrain/src/components/ModalReport/ReportForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bigbrain/src/components/ModalReport/basemarker.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bigbrain/src/components/ModalReport/camera.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bigbrain/src/components/ModalReport/location.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bigbrain/src/components/ModalReport/paperclip.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bigbrain/src/components/ModalReport/pen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bigbrain/src/components/ModalReport/photo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bigbrain/public/base.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bigbrain/public/вырубка.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bigbrain/public/карьер.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bigbrain/public/костер.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bigbrain/public/мусор.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bigbrain/public/огонь.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bigbrain/public/растения.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bigbrain/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bigbrain/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bigbrain/src/components/MapComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/bigbrain/src/components/MapComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bigbrain/src/components/ModalSteps/ModalSteps.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bigbrain/src/container/MainContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/bigbrain/src/container/MainContainer.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,34 +28,25 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="BOOT_CAMP" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MapComponent.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bigbrain/src/components/MapComponent.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1122">
-              <caret line="59" column="39" lean-forward="true" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bigbrain/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="704">
-              <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainContainer.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainContainer.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bigbrain/src/container/MainContainer.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1232">
+              <caret line="94" column="43" selection-start-line="94" selection-start-column="43" selection-end-line="94" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MapComponent.jsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bigbrain/src/components/MapComponent.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-107">
+              <caret line="54" column="4" lean-forward="true" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -62,9 +61,6 @@
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="dummy://restClient/response5.json" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -92,6 +88,47 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
       <path value="$PROJECT_DIR$/bigbrain/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/array-union/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/array-uniq/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/async/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/balanced-match/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/brace-expansion/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/commander/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/concat-map/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/email-addresses/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/escape-string-regexp/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/filename-reserved-regex/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/filenamify-url/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/filenamify/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/fs-extra/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/fs.realpath/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/gh-pages/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/glob/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/globby/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/graceful-fs/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/humanize-url/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/inflight/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/inherits/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/is-plain-obj/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/jsonfile/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/lodash/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/minimatch/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/normalize-url/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/object-assign/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/once/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/path-is-absolute/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/pify/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/pinkie-promise/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/pinkie/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/prepend-http/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/query-string/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/sort-keys/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/strict-uri-encode/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/strip-outer/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/strip-url-auth/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/trim-repeated/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/universalify/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/wrappy/package.json" />
     </packageJsonPaths>
   </component>
   <component name="PhpServers">
@@ -105,10 +142,54 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="BOOT_CAMP" type="cbb8eebc:String" user="BOOT_CAMP" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="BOOT_CAMP" type="cbb8eebc:String" user="BOOT_CAMP" />
+              <item name="bigbrain" type="cbb8eebc:String" user="bigbrain" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="BOOT_CAMP" type="cbb8eebc:String" user="BOOT_CAMP" />
+              <item name="bigbrain" type="cbb8eebc:String" user="bigbrain" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="BOOT_CAMP" type="cbb8eebc:String" user="BOOT_CAMP" />
+              <item name="bigbrain" type="cbb8eebc:String" user="bigbrain" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="assets" type="cbb8eebc:String" user="assets" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="BOOT_CAMP" type="cbb8eebc:String" user="BOOT_CAMP" />
+              <item name="bigbrain" type="cbb8eebc:String" user="bigbrain" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="components" type="cbb8eebc:String" user="components" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="BOOT_CAMP" type="cbb8eebc:String" user="BOOT_CAMP" />
+              <item name="bigbrain" type="cbb8eebc:String" user="bigbrain" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="components" type="cbb8eebc:String" user="components" />
+              <item name="ModalSteps" type="cbb8eebc:String" user="ModalSteps" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -180,7 +261,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -243,6 +323,7 @@
       <workItem from="1588187500502" duration="14436000" />
       <workItem from="1588248213228" duration="2958000" />
       <workItem from="1588265411862" duration="4346000" />
+      <workItem from="1589208514545" duration="1160000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1586795184064</created>
@@ -304,33 +385,54 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31011000" />
+    <option name="totallyTimeSpent" value="32433000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="52" y="-11" width="1869" height="1092" extended-state="6" />
-    <editor active="true" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4993464" visible="true" weight="0.17408018" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Database" order="3" weight="0.3294893" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="REST Client" weight="0.34453782" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.16911764" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.2867647" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22185612" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Structure" order="2" sideWeight="0.5006536" side_tool="true" weight="0.17078528" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.20063025" />
+      <window_info id="Favorites" order="0" side_tool="true" weight="0.3294893" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="REST Client" order="9" weight="0.34453782" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.16911764" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23009336" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="REST Client" order="12" weight="0.34453782" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.20168068" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -349,6 +451,20 @@
     <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/bigbrain/src/components/ButtonMainPlus.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bigbrain/src/container/MainContainer.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="89" column="38" selection-start-line="89" selection-start-column="38" selection-end-line="89" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bigbrain/src/components/MapComponent.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="902">
@@ -367,9 +483,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="770">
           <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -408,9 +521,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="704">
           <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -456,9 +566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="704">
           <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -487,9 +594,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
           <caret line="26" column="12" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -523,9 +627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
           <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -585,9 +686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="704">
           <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -616,9 +714,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
           <caret line="26" column="12" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -631,13 +726,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/projectBigBrain_group-MainPage/bigbrain/src/container/MapContainer.jsx" />
-    <entry file="file://$PROJECT_DIR$/bigbrain/src/components/ModalSteps/ModalSteps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="2" selection-start-column="7" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bigbrain/src/components/ButtonMainPlus.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -669,20 +757,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bigbrain/src/components/MapComponent.jsx">
+    <entry file="file://$PROJECT_DIR$/bigbrain/src/components/ModalReport/ReportForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="59" column="39" lean-forward="true" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
+        <state relative-caret-position="-169">
+          <caret line="78" column="43" lean-forward="true" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bigbrain/src/container/MainContainer.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+        <state relative-caret-position="1232">
+          <caret line="94" column="43" selection-start-line="94" selection-start-column="43" selection-end-line="94" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bigbrain/src/components/ModalReport/MapComponentReport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bigbrain/src/components/MarkerList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bigbrain/src/components/ModalSteps/ModalSteps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" selection-start-column="7" selection-end-line="2" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bigbrain/src/components/MapComponent.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-107">
+          <caret line="54" column="4" lean-forward="true" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
         </state>
       </provider>
     </entry>
