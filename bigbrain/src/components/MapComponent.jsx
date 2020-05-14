@@ -77,7 +77,7 @@ export const MapComponent = compose(
           />
         )
       )
-    )}
+    }
     {props.showInfoIcon && (
       <InfoIconProblem
         handleClickInfoIcon={props.handleClickInfoIcon}
