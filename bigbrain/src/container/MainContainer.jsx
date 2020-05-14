@@ -1,57 +1,64 @@
 import React, { Component } from "react";
-import { MapComponent, ButtonPlus } from "../components/index.js";
-import axios from 'axios';
+import axios from "axios";
+import ReactModal from "react-modal";
 import '../components/ModalReport/Modal.css';
 import ReportForm from '../components/ModalReport/ReportForm';
 import ModalFinish from '../components/ModalReport/ModalFinish';
 import InfoModal from '../components/ModalReport/InfoModal';
+import { BASE_URL } from "../constans";
+import { MapComponent, ButtonPlus } from "../components/index.js";
 
-const API_URL =
-  "https://cors-anywhere.herokuapp.com/https://arcane-eyrie-30848.herokuapp.com";
 
- export const ClickedContextMarker = React.createContext(null);
+export const ClickedContextMarker = React.createContext(null);
 
 export class MainContainer extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            pin: [],
+            showModal: false,
+            showInfoIcon: false,
+            categoryId: "",
+            showModal2: false,
+            showModalFinish:false,
+            isMarkerShown: false,
+            position:[
+                {lat: null},
+                {lng: null}
+            ]
+        };
+    }
 
-  state = {
-    pin: [],
-    showModal: false,
-    showModal2: false,
-    showModalFinish:false,
-    isMarkerShown: false,
-    position:[
-        {lat: null},
-        {lng: null}
-    ]
-  };
+    componentDidMount() {
+        const url = `${BASE_URL}/api/v1/pin/`;
+        return axios.get(url).then((response) => {
+            this.setState({ pin: response.data });
+        });
+    }
 
-
-onMapClick = (e)=> {
-    const lat = e.latLng.lat();
-    const lng =e.latLng.lng();
-    return(
-    this.setState({
-        position:[
-            {lat: lat},
-            {lng: lng }
-        ],
-        isMarkerShown:true
-    }))
+    handleClickInfoIcon = (elem, categ) => {
+        this.setState((prevState) => ({
+            showInfoIcon: !prevState.showInfoIcon,
+            categoryId: elem,
+        }));
     };
 
-  componentDidMount() {
-    const url = `${API_URL}/api/v1/pin/`;
-    return axios
-      .get(url)
-      .then((response) => response.data)
-      .then((result) => this.setState({ pin: result }))
-      .catch((error) => console.log("error", error));
-  }
-    state = {
-        pin: [],
-
+    handleModal = () => {
+        this.setState({ showModal: !this.state.showModal });
     };
 
+    onMapClick = (e)=> {
+        const lat = e.latLng.lat();
+        const lng =e.latLng.lng();
+        return(
+            this.setState({
+                position:[
+                    {lat: lat},
+                    {lng: lng }
+                ],
+                isMarkerShown:true
+            }))
+    };
 
     toggleModal = () => {
         this.setState({showModal:!this.state.showModal});
@@ -59,13 +66,13 @@ onMapClick = (e)=> {
 
     toggleModalReport = () => {
         this.setState({showModal:false,
-                   showModal2:!this.state.showModal2}
+            showModal2:!this.state.showModal2}
         );
     };
 
     backPrevStep= () => {
         this.setState({showModal:true,
-                      showModal2:false}
+            showModal2:false}
         );
     };
 
@@ -88,10 +95,8 @@ onMapClick = (e)=> {
             showModal2:true
         })
     };
-
-  render() {
-
-    const {pin,showModal,showModal2,showModalFinish, isMarkerShown,position} = this.state;
+    render() {
+    const {pin, showInfoIcon, categoryId,showModal,showModal2,showModalFinish, isMarkerShown,position} = this.state
 
     return (
       <div className="main">
@@ -100,11 +105,13 @@ onMapClick = (e)=> {
             onClickCreateMarker={this.onMapClick.bind(this)}
             isMarkerShown={isMarkerShown}
             position={position}
+            showInfoIcon={showInfoIcon}
+            handleClickInfoIcon={this.handleClickInfoIcon}
+            categoryId={categoryId}
         />
-
-        <ButtonPlus
-            onClickBtn = {this.toggleModal.bind(this)}
-        />
+          <ButtonPlus
+              onClickBtn = {this.toggleModal.bind(this)}
+          />
           {showModal ? (
               <InfoModal
                   onClick={this.toggleModal.bind(this)}
@@ -114,22 +121,21 @@ onMapClick = (e)=> {
 
           {showModal2 ? (
               <ClickedContextMarker.Provider value = {this.state.position}>
-              < ReportForm
-                  onCancel ={this.toggleModalReport.bind(this)}
-                  onBack = {this.backPrevStep.bind(this)}
-                  geo={position}
-                  onCloseReportForm = {this.closeReportForm.bind(this)}
-              />
+                  < ReportForm
+                      onCancel ={this.toggleModalReport.bind(this)}
+                      onBack = {this.backPrevStep.bind(this)}
+                      geo={position}
+                      onCloseReportForm = {this.closeReportForm.bind(this)}
+                  />
               </ClickedContextMarker.Provider>
           ) : null}
 
           {showModalFinish ? (
-                  <ModalFinish
-                      onClose={this.toggleCurrentModal.bind(this)}
-                      onCrossToReport={this.crossToReport.bind(this)}
-                  />
+              <ModalFinish
+                  onClose={this.toggleCurrentModal.bind(this)}
+                  onCrossToReport={this.crossToReport.bind(this)}
+              />
           ) : null}
-
       </div>
     );
   }
