@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import {
     withScriptjs,
     withGoogleMap,
@@ -10,10 +10,7 @@ import {ClickedContextMarker} from '../../container/MainContainer.jsx'
 import {compose, withProps} from "recompose";
 
 
-
-
-
- const MapComponentReport = compose(
+const MapComponentReport = compose(
     withProps({
         googleMapURL:
             "https://maps.googleapis.com/maps/api/js?v=weekly&key=AIzaSyBIHu3UtN5LFuO9rEQuFLaSAiStv6VB3Qs",
@@ -36,15 +33,15 @@ import {compose, withProps} from "recompose";
     withGoogleMap
 )((props) => (
     <GoogleMap
-        zoom={10}
+        zoom={8}
         defaultCenter={{lat: 49.990159, lng: 36.233081}}
 
     >
-       <ClickedContextMarker.Consumer>
-           {position => position ? <Marker
-               position={{lat:position[0].lat, lng:position[1].lng}}
-               icon={{url:require("../../assets/icon/basemarker.png") }}/> : null}
-       </ClickedContextMarker.Consumer>
+        <ClickedContextMarker.Consumer>
+            {position => position ? <Marker
+                position={{lat: position[0].lat, lng: position[1].lng}}
+                icon={{url: require("../../assets/icon/basemarker.png")}}/> : null}
+        </ClickedContextMarker.Consumer>
 
     </GoogleMap>
 ));

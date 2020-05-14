@@ -11,8 +11,8 @@ import {compose, withProps} from "recompose";
 
 /*API KEY AIzaSyBIHu3UtN5LFuO9rEQuFLaSAiStv6VB3Qs*/
 let icon;
-let pos;
-let posNum;
+let lat;
+let lng;
 
 export const MapComponent = compose(
     withProps({
@@ -66,16 +66,13 @@ export const MapComponent = compose(
                         :elem.category === 8
                         ? icon = require("../assets/icon/poaching.png")
                         : icon = require("../assets/icon/basemarker.png"),
-                    !Array.isArray(elem.geo)
-                            ? (pos = elem.geo.split(","))
-                            : (pos = elem.geo),
-                        (posNum = pos.map(function (item) {
-                            let number = Number(item);
-                            return isNaN(number) ? item : number;
-                        })),
+
+                    lat = Number(elem.lat),
+                    lng = Number(elem.lng),
+
                      <Marker
                             key={props.pin.id}
-                            position={{lat: posNum[0], lng: posNum[1]}}
+                            position={{lat: lat, lng: lng}}
                             icon={{
                                 url: icon,
                                 scaledSize: new window.google.maps.Size(26, 32),

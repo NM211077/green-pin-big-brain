@@ -3,7 +3,8 @@ import { MapComponent, ButtonPlus } from "../components/index.js";
 import axios from 'axios';
 import '../components/ModalReport/Modal.css';
 import ReportForm from '../components/ModalReport/ReportForm';
-
+import ModalFinish from '../components/ModalReport/ModalFinish';
+import InfoModal from '../components/ModalReport/InfoModal';
 
 const API_URL =
   "https://cors-anywhere.herokuapp.com/https://arcane-eyrie-30848.herokuapp.com";
@@ -16,12 +17,12 @@ export class MainContainer extends Component {
     pin: [],
     showModal: false,
     showModal2: false,
+    showModalFinish:false,
     isMarkerShown: false,
     position:[
         {lat: null},
         {lng: null}
-]
-
+    ]
   };
 
 
@@ -35,12 +36,11 @@ onMapClick = (e)=> {
             {lng: lng }
         ],
         isMarkerShown:true
-}))
-}
-
+    }))
+    };
 
   componentDidMount() {
-    const url = `${API_URL}/api/v1/pin`;
+    const url = `${API_URL}/api/v1/pin/`;
     return axios
       .get(url)
       .then((response) => response.data)
@@ -53,26 +53,45 @@ onMapClick = (e)=> {
     };
 
 
-    toggleModal = () => {console.log('showModal',this.state.showModal,8888);
+    toggleModal = () => {
         this.setState({showModal:!this.state.showModal});
     };
 
-    toggleModalReport = () => {console.log('showModal2',this.state.showModal2,9999);
+    toggleModalReport = () => {
         this.setState({showModal:false,
                    showModal2:!this.state.showModal2}
         );
     };
 
-    backPrevStep= () => {console.log('back', 7777);
+    backPrevStep= () => {
         this.setState({showModal:true,
                       showModal2:false}
         );
     };
 
+    closeReportForm = (e) =>{
+        e.preventDefault();
+        this.setState({
+            showModal2: false,
+            showModalFinish: true
+        })
+    }
+    toggleCurrentModal = () => {
+        this.setState({
+            showModalFinish:!this.state.showModalFinish
+        });
+    };
+
+    crossToReport=()=>{
+        this.setState({
+            showModalFinish:false,
+            showModal2:true
+        })
+    };
 
   render() {
 
-const {pin,showModal,showModal2, isMarkerShown,position} = this.state;
+    const {pin,showModal,showModal2,showModalFinish, isMarkerShown,position} = this.state;
 
     return (
       <div className="main">
@@ -87,19 +106,10 @@ const {pin,showModal,showModal2, isMarkerShown,position} = this.state;
             onClickBtn = {this.toggleModal.bind(this)}
         />
           {showModal ? (
-              <div className='modalStep'>
-                  <p className="modalStepInfo">Please select a place on the map
-                  </p>
-                  <button
-                      className="modal-close"
-                      onClick={this.toggleModal.bind(this)}
-                  >
-                      <p>X</p>
-                  </button>
-                  <button className= 'nextStep' onClick={this.toggleModalReport.bind(this)}>
-                      Continue
-                  </button>
-              </div>
+              <InfoModal
+                  onClick={this.toggleModal.bind(this)}
+                  onClose={this.toggleModalReport.bind(this)}
+              />
           ) : null};
 
           {showModal2 ? (
@@ -107,9 +117,19 @@ const {pin,showModal,showModal2, isMarkerShown,position} = this.state;
               < ReportForm
                   onCancel ={this.toggleModalReport.bind(this)}
                   onBack = {this.backPrevStep.bind(this)}
+                  geo={position}
+                  onCloseReportForm = {this.closeReportForm.bind(this)}
               />
               </ClickedContextMarker.Provider>
           ) : null}
+
+          {showModalFinish ? (
+                  <ModalFinish
+                      onClose={this.toggleCurrentModal.bind(this)}
+                      onCrossToReport={this.crossToReport.bind(this)}
+                  />
+          ) : null}
+
       </div>
     );
   }
