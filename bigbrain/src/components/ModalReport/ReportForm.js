@@ -62,8 +62,9 @@ export default class ReportForm extends Component {
     }
 
     handleClick = e => {
+        console.log(this.props.geo );
         e.preventDefault();
-        if (!this.props.geo) {
+        if (!this.props.geo[0].lat) {
             this.setState({showModalGeo: true})
         } else {
             if (!this.state.selectedOption.id) {
@@ -73,7 +74,7 @@ export default class ReportForm extends Component {
                 const {onCloseReportForm, onMarkerHide} = this.props;
                 onCloseReportForm(e);
             }
-        }
+        } console.log(this.state.showModalGeo);
     }
 
     handleSubmit(e) {
@@ -104,11 +105,26 @@ export default class ReportForm extends Component {
         this.setState({selectedOption});
     };
 
-    toggleModal = () => {
+    closeModalGeo=e=>{
+        const{onBack}=this.props;
+        e.preventDefault();
+        onBack(e);
+        this.toggleModal(e);
+    }
+    toggleModal = (e) => {console.log(66668);
+        e.preventDefault();
         this.setState({showModalGeo: !this.state.showModalGeo});
     };
 
-    toggleModalSelect = () => {
+    closeModalSelect = e =>{
+        const{onBack} = this.props;
+        e.preventDefault();
+        onBack(e);
+        this.toggleModalSelect(e);
+    }
+
+    toggleModalSelect = (e) => {
+        e.preventDefault();
         this.setState({showModalSelect: !this.state.showModalSelect});
     };
 
@@ -159,9 +175,11 @@ export default class ReportForm extends Component {
                             <ImageUpload/>
                         </div>
                     </div>
-                    <button className='nextStepFinish' type='submit'>
-                        <p>Submit</p>
+
+                    <button className='Btn-nextStepFinish' type='submit'>
+                        <p className='nameBtnSubmit'>Submit</p>
                     </button>
+
                 </form>
                 <button
                     className="modal-close"
@@ -170,20 +188,13 @@ export default class ReportForm extends Component {
                     <p>X</p>
                 </button>
 
-                <button
-                    className='backPrev'
-                    onClick={this.props.onBack}
-                >
-                    <p>&lt;</p>
-                </button>
-
                 {showModalGeo ? (<ModalGeo
-                        onClose={this.toggleModal.bind(this)}
+                        onClose={this.closeModalGeo.bind(this)}
                     />
                 ) : null}
 
                 {showModalSelect ? ( <ModalSelect
-                        onClose={this.toggleModalSelect.bind(this)}
+                        onClose={this.closeModalSelect.bind(this)}
                     />
                 ) : null}
             </div>
