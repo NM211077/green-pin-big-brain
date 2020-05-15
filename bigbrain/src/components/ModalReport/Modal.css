@@ -15,10 +15,11 @@
     margin-bottom: 5px;
 }
 
+
 .modalStep {
     position: absolute;
-    left: 520px;
-    top: 302px;
+    left: 720px;
+    top: 352px;
     margin: auto;
     color: red;
 
@@ -143,7 +144,7 @@
     top: 28px;
 }
 
-.nextStepFinish {
+.Btn-nextStepFinish {
     position: absolute;
     width: 160px;
     height: 48px;
@@ -152,10 +153,17 @@
     background: #518371;
     border: 1px solid #518371;
     border-radius: 40px;
-    font-weight: 500;
+    transition: all 0.5s;
+    font-weight: normal;
     font-size: 16px;
     line-height: 19px;
     color: #FFFFFF;
+}
+
+button:hover{
+
+    background-color: #FFFFFF;
+    color:#518371;
 }
 
 .note {
@@ -311,7 +319,7 @@
     height: 71px;
     font-family: Roboto;
     font-style: normal;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 18px;
     text-align: center;
     padding-top: 31px;
@@ -331,7 +339,7 @@
     height: 71px;
     font-family: Roboto;
     font-style: normal;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 18px;
     text-align: center;
     padding-top: 31px;
@@ -345,8 +353,8 @@
     position: absolute;
     width: 400px;
     height: 171px;
-    left: 520px;
-    top: 292px;
+    left: 720px;
+    top: 352px;
     background: #FFFFFF;
     box-shadow: 0px 4px 16px #CAD2D3;
     border-radius: 20px;
@@ -361,21 +369,15 @@
     background: #518371;
     border: 1px solid #5E8D7C;
     box-sizing: border-box;
-    border-radius: 40px;
-}
-
-.modal-finish {
-    position: absolute;
-    width: 66px;
-    height: 19px;
-    left: 47px;
-    top: 11px;
-    font-family: BPreplay;
+    border-radius: 40px;font-family: BPreplay;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 19px;
     color: #FFFFFF;
+}
+.btnModal-finish:hover{
+    color: #518371;
 }
 
 .modalFinishText {
@@ -392,4 +394,6 @@
     text-align: center;
     color: #000000;
 }
+
+
 

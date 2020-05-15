@@ -70,7 +70,8 @@ export class MainContainer extends Component {
         );
     };
 
-    backPrevStep= () => {
+    backPrevStep= (e) => {
+        e.preventDefault();
         this.setState({showModal:true,
             showModal2:false}
         );
