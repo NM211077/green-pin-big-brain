@@ -324,7 +324,7 @@ button:hover{
     text-align: center;
     padding-top: 31px;
     background: #FFFFFF;
-    box-shadow: 0px 4px 16px #CAD2D3;
+    border: 1px solid #518371 ;
     border-radius: 20px;
     color: #F6A275;
 }
@@ -344,7 +344,7 @@ button:hover{
     text-align: center;
     padding-top: 31px;
     background: #FFFFFF;
-    box-shadow: 0px 4px 16px #CAD2D3;
+    border: 1px solid #518371;
     border-radius: 20px;
     color: #F6A275;
 }
