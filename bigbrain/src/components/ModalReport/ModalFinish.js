@@ -9,7 +9,7 @@ const ModalFinish = (props) => {
             <p className='modalFinishText'>Your request are successfully saved
             </p>
             <button className="modal-close"
-                    onClick={onClose}>x
+                    onClick={onClose}>X
             </button>
             <button className="btnModal-finish"
                     onClick={onCrossToReport}>
