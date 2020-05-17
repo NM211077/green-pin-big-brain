@@ -19,6 +19,7 @@ export class MainContainer extends Component {
             showModal: false,
             showInfoIcon: false,
             categoryId: "",
+            isPinShow:true,
             showModal2: false,
             showModalFinish:false,
             isMarkerShown: false,
@@ -36,15 +37,17 @@ export class MainContainer extends Component {
         });
     }
 
-    handleClickInfoIcon = (elem, categ) => {
+    handleClickInfoIcon = (elem, categ) => {console.log(elem);
         this.setState((prevState) => ({
             showInfoIcon: !prevState.showInfoIcon,
-            categoryId: elem,
+            categoryId: elem
         }));
     };
 
-    handleModal = () => {
-        this.setState({ showModal: !this.state.showModal });
+    handlePinShow = (e) => {console.log(this.state.isPinShow, '1 pin');
+        e.preventDefault();
+        this.setState({ isPinShow:false });
+        console.log(this.state.isPinShow, '2 pin');
     };
 
     onMapClick = (e)=> {
@@ -77,13 +80,14 @@ export class MainContainer extends Component {
         );
     };
 
-    closeReportForm = (e) =>{
+    closeReportForm = (e) =>{console.log(888);
         e.preventDefault();
         this.setState({
             showModal2: false,
             showModalFinish: true
         })
-    }
+    };
+
     toggleCurrentModal = () => {
         this.setState({
             showModalFinish:!this.state.showModalFinish
@@ -97,7 +101,7 @@ export class MainContainer extends Component {
         })
     };
     render() {
-    const {pin, showInfoIcon, categoryId,showModal,showModal2,showModalFinish, isMarkerShown,position} = this.state
+    const {pin, showInfoIcon, categoryId,showModal,showModal2,showModalFinish, isMarkerShown,position,isPinShow} = this.state
 
     return (
       <div className="main">
@@ -109,6 +113,7 @@ export class MainContainer extends Component {
             showInfoIcon={showInfoIcon}
             handleClickInfoIcon={this.handleClickInfoIcon}
             categoryId={categoryId}
+            onToggleShow={this.handlePinShow}
         />
           <ButtonPlus
               onClickBtn = {this.toggleModal.bind(this)}
@@ -118,7 +123,7 @@ export class MainContainer extends Component {
                   onClick={this.toggleModal.bind(this)}
                   onClose={this.toggleModalReport.bind(this)}
               />
-          ) : null};
+          ) : null}
 
           {showModal2 ? (
               <ClickedContextMarker.Provider value = {this.state.position}>

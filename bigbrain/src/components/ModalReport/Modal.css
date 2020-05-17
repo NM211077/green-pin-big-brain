@@ -37,10 +37,10 @@
 
 .modal-close {
     position: absolute;
-    width: 48px;
-    height: 18px;
-    right: 1px;
-    top: 9px;
+    width: 24px;
+    height: 24px;
+    right: 3px;
+    top: 8px;
     cursor: pointer;
     border: none;
     font-weight: normal;
@@ -151,7 +151,7 @@
     left: 139px;
     top: 751px;
     background: #518371;
-    border: 1px solid #518371;
+    border: 1px solid #5E8D7C;
     border-radius: 40px;
     transition: all 0.5s;
     font-weight: normal;
@@ -166,7 +166,7 @@ button:hover{
     color:#518371;
 }
 
-.note {
+.note-reportForm {
     position: absolute;
     max-width: 390px;
     width: 100%;
@@ -332,11 +332,11 @@ button:hover{
 .modalSelect {
     position: absolute;
     left: 120px;
-    top: 430px;
+    top: 431px;
     margin: auto;
     text-align: center;
     width: 300px;
-    height: 71px;
+    height: 73px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;

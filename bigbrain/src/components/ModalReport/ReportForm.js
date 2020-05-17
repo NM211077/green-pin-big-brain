@@ -34,12 +34,12 @@ export default class ReportForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            note1: [
+            note1:
                 {value: ''},
-            ],
-            note2: [
+
+            note2:
                 {value: ''},
-            ],
+
             selectedOption: '',
             showModalGeo: false,
             showModalSelect: false
@@ -51,6 +51,7 @@ export default class ReportForm extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleClick = this.handleClick.bind(this);
     };
+
 
 
     handleChange(event) {
@@ -79,7 +80,7 @@ export default class ReportForm extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        fetch("https://arcane-eyrie-30848.herokuapp.com/api/v1/pin/", {
+        fetch("https://cors-anywhere.herokuapp.com/https://arcane-eyrie-30848.herokuapp.com/api/v1/pin/", {
             method: "POST",
             body: JSON.stringify({
                     title: this.state.selectedOption.value,
@@ -87,12 +88,12 @@ export default class ReportForm extends Component {
                     lng: this.props.geo[1].lng,
                     category: this.state.selectedOption.id,
                     user: 1,
-                    comment: this.state.note1.value + ';' + this.state.note2.value
+                    comment: this.state.note1.value + ' ' + this.state.note2.value
                 }
             ),
             headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
+                "Accept": "application/json",
+                "Content-Type": "application/json",
             }
         }).then(response => {
             response.json().then(data => {
@@ -131,6 +132,7 @@ export default class ReportForm extends Component {
 
     render() {
         const {note1, note2, selectedOption, showModalGeo, showModalSelect} = this.state;
+
         return (
             <div className='modalStep2'>
                 <div className='information'><span>Information</span></div>
@@ -142,7 +144,7 @@ export default class ReportForm extends Component {
                         <MapComponentReport
                         />
                     </div>
-                    <div className='note'><span className='spanNote'>Note: </span>
+                    <div className='note-reportForm'><span className='spanNote'>Note: </span>
                         <textarea
                             className='textNote'
                             type="text"

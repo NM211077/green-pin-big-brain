@@ -45,7 +45,7 @@ export const MapComponent = compose(
               position={{lat:props.position[0].lat, lng:props.position[1].lng}}
               icon={{url: require("../assets/icon/basemarker.png")}}/>
       }
-    {props.pin.map(
+    { props.pin.map(
       (elem) => (
         elem.category === 1
           ? (icon = require("../assets/icon/cuttingDown.png"))
@@ -66,14 +66,16 @@ export const MapComponent = compose(
           : (icon = require("../assets/icon/base.png")),
             lat = Number(elem.lat),
             lng = Number(elem.lng),
+
           <Marker
-            key={elem.category}
+            key={elem.id}
             position={{lat: lat, lng: lng}}
             icon={{
                 url: icon,
                 scaledSize: new window.google.maps.Size(26, 32),
             }}
-            onClick={props.handleClickInfoIcon.bind(elem, elem.category)}
+            onClick={props.handleClickInfoIcon.bind(elem, elem.id)}
+
           />
         )
       )
@@ -83,6 +85,8 @@ export const MapComponent = compose(
         handleClickInfoIcon={props.handleClickInfoIcon}
         pin={props.pin}
         categoryId={props.categoryId}
+        key={props.key}
+        removeMarker={props.onToggleShow.bind(this)}
       />
     )}
   </GoogleMap>
