@@ -16,11 +16,15 @@ export class InfoIconProblem extends Component {
         infoModal: {},
         showModalDone: false,
         showModalRemove:false,
+        isAutorization:true,
         inputFieldData: {
             pass: {
                 val: "",
                 error: false
-            }
+            },
+            email:{
+                val:"",
+            error:false}
         }
     };
 
@@ -31,26 +35,11 @@ export class InfoIconProblem extends Component {
         this.setState({infoModal});
     }
 
-    inputChange = e => {
-        const value = e.target.value;
-
-        this.setState({
-            inputFieldData: {
-                pass: {
-                    val: value.split(" ").join(""),
-                    error: false
-                }
-            }
-        });
-    };
 
     removeMarker=e=> {
         e.preventDefault();
-        const password = this.state.inputFieldData.pass.val;
-        const{removeMarker,categoryId}=this.props;
+        const{categoryId}=this.props;
         const pin = categoryId;
-        console.log(pin, password);
-        if(password){
         fetch(`https://cors-anywhere.herokuapp.com/https://arcane-eyrie-30848.herokuapp.com/api/v1/pin/${pin}/`, {
             method: "DELETE",
             headers: {
@@ -62,36 +51,44 @@ export class InfoIconProblem extends Component {
                 console.log("Successful" + data);
             })
         }).catch((error) => console.log("error", error));
-        }else {alert("Корректировка возможна только после введения пароля")}
-    }
+        this.setState({
+            showModalRemove:false
+        });
+    };
+
     doneMareker =(e)=>{
-        console.log(3333);
         e.preventDefault();
         this.setState({showModalDone:false,showModalRemove:true})
-    }
+    };
 
     onCloseConfirm=(e)=>{
         e.preventDefault();
         this.setState({
-            showModalDone:true,showModalRemove:false
+            showModalRemove:false
         })
-    }
+    };
     onClosePass =(e)=>{
         e.preventDefault();
         this.setState({
             showModalDone:false
         })
-    }
+    };
+
   toggleModalDone = e =>{
-        console.log(999);
         e.preventDefault();
-        this.setState({showModalDone:true})
-    }
+        if (this.state.isAutorization){
+            this.setState({
+                showModalRemove: true
+            })
+        } else{
+            this.setState({showModalDone:true})
+        }
+    };
 
     render() {
         const {img, title, comment} = this.state.infoModal;
-        const{showModalDone, inputFieldData,showModalRemove} = this.state;
-        return (console.log(title),
+        const{showModalDone, showModalRemove} = this.state;
+        return (
                 <div className="icon-info-modal">
                     <Flip>
                         <div className="container-info">
@@ -109,9 +106,7 @@ export class InfoIconProblem extends Component {
                                         <h5>Type: </h5><span>{title ? title.toUpperCase() : ""}</span>
                                     </div>
                                     <div className="title-name-problem">
-
                                     </div>
-
                                 </div>
                                 <div className="heading-photo">
                                     <img src={camera} alt="icon" className="icon"/>
@@ -128,9 +123,9 @@ export class InfoIconProblem extends Component {
                                 )}
                                 <p className="note">
                                     {comment || (
-                                        <p className="error-photo">
+                                        <span className="error-photo">
                                             Комментарии отсутствуют к данной метке.
-                                        </p>
+                                        </span>
                                     )}
                                 </p>
                             </div>
@@ -146,14 +141,8 @@ export class InfoIconProblem extends Component {
                                     onClick = {this.toggleModalDone.bind(this)}
                                 ><span>DONE</span></button>
                             </div>
-                            {showModalDone ? <PasswordDone
-                                inputFieldData ={inputFieldData}
-                                onChange={this.inputChange.bind(this)}
-                                onSubmit={this.doneMareker.bind(this)}
-                                onClose ={this.onClosePass.bind(this)}
-                            /> :null}
+                            {showModalDone ? <PasswordDone/> :null}
                             {showModalRemove ? <ModalRemove
-                                inputFieldData ={inputFieldData}
                                 onSubmit={this.removeMarker.bind(this)}
                                 onClose ={this.onCloseConfirm.bind(this)}
                             /> :null}

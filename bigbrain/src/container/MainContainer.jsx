@@ -37,7 +37,7 @@ export class MainContainer extends Component {
         });
     }
 
-    handleClickInfoIcon = (elem, categ) => {console.log(elem);
+    handleClickInfoIcon = (elem, categ) => {
         this.setState((prevState) => ({
             showInfoIcon: !prevState.showInfoIcon,
             categoryId: elem
