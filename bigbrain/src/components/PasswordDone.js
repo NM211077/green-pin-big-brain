@@ -5,8 +5,6 @@ class PasswordDone extends Component {
 
 
     render() {
-
-
         return (
             <div className="done-pass">
                 <h4>To change the status you need to be an authorized user</h4>
