@@ -16,7 +16,7 @@ export class InfoIconProblem extends Component {
         infoModal: {},
         showModalDone: false,
         showModalRemove:false,
-        isAutorization:true
+        isAutorization:false
     };
 
     componentDidMount() {
@@ -132,7 +132,9 @@ export class InfoIconProblem extends Component {
                                     onClick = {this.toggleModalDone.bind(this)}
                                 ><span>DONE</span></button>
                             </div>
-                            {showModalDone ? <PasswordDone/> :null}
+                            {showModalDone ? <PasswordDone
+                                onClose={this.onClosePass.bind(this)}
+                            /> :null}
                             {showModalRemove ? <ModalRemove
                                 onSubmit={this.removeMarker.bind(this)}
                                 onClose ={this.onCloseConfirm.bind(this)}
