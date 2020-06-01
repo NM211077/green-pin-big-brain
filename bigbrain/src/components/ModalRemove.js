@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 
-
 class ModalRemove extends Component {
     render() {
         return (

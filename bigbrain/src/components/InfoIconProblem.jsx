@@ -16,16 +16,7 @@ export class InfoIconProblem extends Component {
         infoModal: {},
         showModalDone: false,
         showModalRemove:false,
-        isAutorization:true,
-        inputFieldData: {
-            pass: {
-                val: "",
-                error: false
-            },
-            email:{
-                val:"",
-            error:false}
-        }
+        isAutorization:true
     };
 
     componentDidMount() {
