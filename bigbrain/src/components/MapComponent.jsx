@@ -11,8 +11,6 @@ import { InfoIconProblem } from "./index";
 
 /*API KEY AIzaSyBIHu3UtN5LFuO9rEQuFLaSAiStv6VB3Qs*/
 let icon;
-let lat;
-let lng;
 
 export const MapComponent = compose(
     withProps({
@@ -42,7 +40,7 @@ export const MapComponent = compose(
       onClick={props.onClickCreateMarker}
   >
       {props.isMarkerShown && <Marker
-              position={{lat:props.position[0].lat, lng:props.position[1].lng}}
+              position={{lat:props.position.lat, lng:props.position.lng}}
               icon={{url: require("../assets/icon/basemarker.png")}}/>
       }
     { props.pin.map(
@@ -64,18 +62,14 @@ export const MapComponent = compose(
           : elem.category === 8
           ? (icon = require("../assets/icon/poaching.png"))
           : (icon = require("../assets/icon/base.png")),
-            lat = Number(elem.lat),
-            lng = Number(elem.lng),
-
           <Marker
             key={elem.id}
-            position={{lat: lat, lng: lng}}
+            position={{lat:elem.location.lat_loc , lng: elem.location.lng_loc}}
             icon={{
                 url: icon,
                 scaledSize: new window.google.maps.Size(26, 32),
             }}
             onClick={props.handleClickInfoIcon.bind(elem, elem.id)}
-
           />
         )
       )

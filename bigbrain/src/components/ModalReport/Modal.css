@@ -303,8 +303,8 @@ button:hover{
 
 .dropPhoto {
     position: absolute;
-    width: 390px;
-    height: 94px;
+    width: 290px;
+    height: 50px;
     left: 10px;
     top: 50px;
 }

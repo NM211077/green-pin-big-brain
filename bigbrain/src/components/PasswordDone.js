@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {Link} from "react-router-dom";
+//import {Link} from "react-router-dom/umd/react-router-dom";
 
 
 class PasswordDone extends Component {
@@ -8,7 +10,7 @@ class PasswordDone extends Component {
         return (
             <div className="done-pass">
                 <h4>To change the status you need to be an authorized user</h4>
-                <div>log in /create account</div>{/*make link cross to login / create account when will be page login*/}
+                <div><Link to='/login'>log in </Link> / create account</div>{/*make link cross to login / create account when will be page login*/}
                 <button className=" btn-close-pass" onClick={this.props.onClose}> X </button>
             </div>
         );

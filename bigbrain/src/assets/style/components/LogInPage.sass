@@ -1,20 +1,18 @@
+
 .log-page
     display: flex
     justify-content: space-between
     max-height: 90vh
+    height: 100%
     overflow: hidden
-    background: #F7F7F7
+    background: #F6F6F4
     img
         width: 50%
+        height: 100%
         object-fit: cover
+        margin-left: 50%
 
 //logIn modal
-.header-login
-    margin: 64px auto 24px
-    color: #518371
-    font-weight: bold
-    font-size: 20px
-    line-height: 23px
 
 .log-in-modal
     // width: 400px
@@ -22,35 +20,174 @@
 .log-in-modal-title
     display: flex
     flex-direction: column
-    border-bottom: 1px solid #518371
     margin-bottom: 4px
+    margin-left: 8%
+    position: absolute
+    width: 358px
+    height: 474px
+    //left: 131px
+    top: 200px
+    background: #F6F6F4
+    //box-shadow: 0px 1px 0px #2C808B
     input
         width: 260px
         height: 40px
         border-radius: 10px
+        border: none
         background: #ffffff
         outline: none
-        border: none
-        margin: auto
+        margin-left: 39px
         margin-bottom: 16px
         font-size: 16px
         padding: 0 10px
+        left: calc(50% - 280px/2)
+        top: 169px
         &::-webkit-input-placeholder
-            color: #000000
+            color: #CAD2D3
+    .header-login
+        margin: 14px auto 14px
+        color: #518371
+        width: 263px
+        height: 26px
+        right: 47px
+        top: 64px
+        font-family: BPreplay
+        font-style: normal
+        font-weight: bold
+        font-size: 24px
+        line-height: 30px
+        text-align: center
+        letter-spacing: 0.05em
+        color: #518371
+
+    .error-login
+        position: absolute
+        height: 40px
+        left: calc(50% - 280px/2)
+        top: calc(50% - 140px/2 + 28px)
+        background: #F6F6F4
+        color: red
+        font-family: Roboto
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
     .checkbox-log
         display: flex
         align-items: center
         width: 280px
-        margin: auto
+        margin-left: auto
         margin-bottom: 26px
+        position: absolute
+        height: 40px
+        left: calc(50% - 280px/2 )
+        top: calc(50% - 140px/2 + 18px)
+        background: #F6F6F4
+        color: #518371
+        font-family: Roboto
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 16px
+
         input
             margin: 0 10px 0 0
             width: 14px
-.login-regulations
-    text-align: center
-    margin: 0 36px
-    line-height: 1.4
-    a
-        font-weight: bold
-        color: #78B0A0
- 
+            background: #ffffff
+    .login-regulations
+        text-align: center
+        line-height: 1.4
+        position: absolute
+        width: 276px
+        height: 46px
+        left: 39px
+        top: 312px
+        a
+            font-weight: bold
+            color: #78B0A0
+
+    .login-regulations-text
+        position: absolute
+        width: 276px
+        height: 36px
+        left: 0px
+        top: 10px
+        font-family: Roboto
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 16px
+        text-align: center
+        color: #B4B9BA
+
+    .login-span-button
+        position: absolute
+        width: 43px
+        height: 19px
+        left: calc(50% - 43px/2 + 0.5px)
+        top: calc(50% - 19px/2 + 0.5px)
+        font-family: BPreplay
+        font-style: normal
+        font-weight: normal
+        font-size: 16px
+        line-height: 19px
+        /* identical to box height */
+        display: flex
+        align-items: center
+        text-align: center
+        color: #FFFFFF
+        border-radius: 10px
+
+    //btn login main page
+    .btn-login
+        width: 220px
+        height: 40px
+        background: #518371
+        border-radius: 20px
+        color: #ffffff
+        margin: auto
+        border: none
+        margin-bottom: 10px
+        position: absolute
+        left: calc(50% - 220px/2 - 3px)
+        bottom: 50px
+
+        &:hover
+            background: #65a38c
+    .btn-forgot-password
+        position: absolute
+        width: 280px
+        height: 40px
+        left: calc(50% - 280px/2 )
+        top: 157px
+        text-align: right
+        border: none
+        background: #F6F6F4
+        color: #518371
+        font-family: Roboto
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 16px
+
+    .btn-sing_in-link-redirect
+        position: absolute
+        width: 100%
+        height: 30px
+        left: 0
+        bottom: 16px
+        margin: auto
+        padding-top: 7px
+        font-family: Roboto
+        font-style: normal
+        font-weight: normal
+        font-size: 20px
+        text-align: center
+        background: #F6F6F4
+        border-top: 1px solid #518371
+        border-right: none
+        border-left: none
+        border-bottom: none
+        a
+            color: #78B09F
+
+

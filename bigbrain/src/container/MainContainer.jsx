@@ -23,16 +23,18 @@ export class MainContainer extends Component {
             showModal2: false,
             showModalFinish:false,
             isMarkerShown: false,
-            position:[
-                {lat: null},
-                {lng: null}
-            ]
+            position:
+                {lat: null,
+                lng: null}
+
         };
     }
 
     componentDidMount() {
         const url = `${BASE_URL}/api/v1/pin/`;
-        return axios.get(url).then((response) => {
+        return axios.get(url).then((response) => {console.log( response.data,'response');
+        //const dataParse=JSON.parse(response.data);
+        //console.log(dataParse);
             this.setState({ pin: response.data });
         });
     }
@@ -53,14 +55,17 @@ export class MainContainer extends Component {
     onMapClick = (e)=> {
         const lat = e.latLng.lat();
         const lng =e.latLng.lng();
+        console.log(typeof lat);
         return(
             this.setState({
-                position:[
-                    {lat: lat},
-                    {lng: lng }
-                ],
+                position:
+                    {lat: lat,
+                    lng: lng }
+                ,
                 isMarkerShown:true
-            }))
+            })
+            )
+
     };
 
     toggleModal = () => {
@@ -80,7 +85,7 @@ export class MainContainer extends Component {
         );
     };
 
-    closeReportForm = (e) =>{console.log(888);
+    closeReportForm = (e) =>{
         e.preventDefault();
         this.setState({
             showModal2: false,
@@ -102,8 +107,7 @@ export class MainContainer extends Component {
     };
     render() {
     const {pin, showInfoIcon, categoryId,showModal,showModal2,showModalFinish, isMarkerShown,position,isPinShow} = this.state
-
-    return (
+    return (console.log(position),
       <div className="main">
         <MapComponent
             pin={pin}

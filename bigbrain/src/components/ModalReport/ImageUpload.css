@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100%;
+    width: 390px;
     min-height: 130px;
     overflow: scroll;
     margin: 0 auto;
@@ -141,4 +141,3 @@
     color: #333333;
     cursor: unset;
 }
-

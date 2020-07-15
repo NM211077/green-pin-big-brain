@@ -3,16 +3,15 @@ import React, {Component} from 'react';
 import Dropzone from 'react-dropzone-uploader';
 import './ImageUpload.css';
 
-
-const ImageUpload = () => {
+ const ImageUpload = () => {
     const handleChangeStatus = ({ meta }, status) => {
         console.log(status, meta)
     }
 
-   /* const handleSubmit = (files, allFiles) => {
-        console.log(files.map(f => f.meta))
-        allFiles.forEach(f => f.remove())
-    }*/
+    /* const handleSubmit = (files, allFiles) => {
+         console.log(files.map(f => f.meta))
+         allFiles.forEach(f => f.remove())
+     }*/
     //const imgIcon=<img src={paperclip}/>
     return (
         <Dropzone
@@ -20,7 +19,7 @@ const ImageUpload = () => {
             //onSubmit={handleSubmit}
             maxFiles={3}
             inputContent = "Drop photo here or click browse"
-            inputWithFilesContent ={files => `${3 - files.length} more`}
+            //inputWithFilesContent ={files => `${3 - files.length} more`}
             submitButtonDisabled={files => files.length < 3}
         />
     )

@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-
 import logo from "../assets/icon/logo.svg";
 import { Navbar } from "../components";
 import styled, { keyframes } from "styled-components";
 import flipInX from "react-animations/lib/flip-in-x";
+import {MainContainer} from "./MainContainer";
+//import {connect} from "react-redux";
 
 const Roll = styled.div`
   animation: 2s ${keyframes`${flipInX}`};

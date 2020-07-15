@@ -1,13 +1,14 @@
-//map icon-info problem modal 
+//map icon-info problem modal
 .icon-info-modal
-    display: block
+    display: flex
     position: absolute
     top: 1%
     // right: 1%
     left: 1%
     bottom: 0
     z-index: 100
-    width: 438px
+    max-width: 438px
+    width: 100%
     height: 560px
     background: #FFFFFF
     box-shadow: 0px 4px 16px #CAD2D3
@@ -44,9 +45,10 @@
     height: 48px
     align-items: center
     position: absolute
-    width: 390px
+    max-width: 390px
+    width: 100%
     height: 48px
-    left: calc(50% - 390px/2)
+    left: 1%
     bottom: 346px
     background: #FFFFFF
     box-shadow: 0px -1px 0px #78B0A0
@@ -82,15 +84,17 @@
 .description-problem-modal
     margin: 30px 0 0 0
     position: absolute
-    width: 390px
+    max-width: 390px
+    width: 100%
     height: 48px
     bottom: 440px
-    left: calc(50% - 390px/2)
+    left: 1%
     background: #FFFFFF
     box-shadow: 0px -1px 0px #78B0A0
 
     .description-head
         display: flex
+
         align-items: center
         border-top: 1px solid #518371
         padding-top: 15px
@@ -159,7 +163,8 @@
     box-shadow: 0px 4px 16px #CAD2D3
     border-radius: 20px
     padding-top: 23px
-
+    a
+        color: #F6A275
 .passInput
     border: 1px solid #518371
     background: #FFFFFF
@@ -168,13 +173,13 @@
 
 
 .register-form
-            position: absolute
-            left: 110px
-            top: 82px
-            font-family: Roboto
-            font-style: normal
-            font-weight: normal
-            font-size: 18px
+    position: absolute
+    left: 110px
+    top: 82px
+    font-family: Roboto
+    font-style: normal
+    font-weight: normal
+    font-size: 18px
 
 
 .confirmModalRemove

@@ -39,7 +39,7 @@ const MapComponentReport = compose(
     >
         <ClickedContextMarker.Consumer>
             {position => position ? <Marker
-                position={{lat: position[0].lat, lng: position[1].lng}}
+                position={{lat: position.lat, lng: position.lng}}
                 icon={{url: require("../../assets/icon/basemarker.png")}}/> : null}
         </ClickedContextMarker.Consumer>
 
