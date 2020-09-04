@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import ReactModal from "react-modal";
-import '../components/ModalReport/Modal.css';
+//import '../components/ModalReport/Modal.css';
 import ReportForm from '../components/ModalReport/ReportForm';
 import ModalFinish from '../components/ModalReport/ModalFinish';
 import InfoModal from '../components/ModalReport/InfoModal';

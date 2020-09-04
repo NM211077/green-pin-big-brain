@@ -1,10 +1,13 @@
 import React from 'react';
 import './Modal.css';
+import Container from 'react-bootstrap/Container'
+
 
 const InfoModal = (props)=>{
     const{onClick, onClose}=props;
     return(
-        <div className='modalStep'>
+        <>
+        <Container className='modalStep'>
             <p className="modalStepInfo">Please select a place on the map
             </p>
             <button
@@ -16,7 +19,8 @@ const InfoModal = (props)=>{
             <button className= 'nextStep' onClick={onClose}>
                 Continue
             </button>
-        </div>
+        </Container>
+        </>
     )
 }
 

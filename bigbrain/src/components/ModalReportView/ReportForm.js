@@ -2,9 +2,10 @@ import React, {Component, Fragment} from 'react';
 import pen from "./pen.png";
 import location from "./location.png";
 import camera from "./camera.png";
-import './Modal.css';
+//import './Modal.css';
 import ModalGeo from './ModalGeo.js';
 import ModalSelect from './ModalSelect.js';
+import ModalReportView from "../ModalReportTest/Modal.js"
 import Select from 'react-select';
 import MapComponentReport from './MapComponentReport.js';
 import ImageUpload from './ImageUpload.js';
@@ -13,7 +14,7 @@ import Dropzone from 'react-dropzone';
 
 
 let lat, lng, locationSubmit;
-const options = [
+/*const options = [
     {value: 'Chopping', label: 'Chopping', id: 1},
     {value: 'Garbage dump', label: 'Garbage dump', id: 2},
     {value: 'Set fire to the grass', label: 'Set fire to the grass', id: 3},
@@ -31,7 +32,7 @@ const customStyles = {
         color: state.isSelected ? 'white' : 'black',
         background: state.isSelected ? '#78B0A0' : '#F7F7F7',
     })
-};
+};*/
 
 export default class ReportForm extends Component {
     constructor(props) {
@@ -82,6 +83,7 @@ export default class ReportForm extends Component {
     }
 
     handleClick = e => {
+        console.log(888);
         console.log(this.props.geo);
         e.preventDefault();
         if (!this.props.geo.lat) {
@@ -159,6 +161,7 @@ export default class ReportForm extends Component {
 
     handleChangeSelectProblem = selectedOption => {
         this.setState({selectedOption});
+        console.log("selectedOption", selectedOption);
     };
 
     closeModalGeo = e => {
@@ -188,92 +191,21 @@ export default class ReportForm extends Component {
 
     render() {
         const {note1, note2, selectedOption, showModalGeo, showModalSelect, image} = this.state;
-        const imagezone = image.map(file => (
-            <li key={file.name}>
-                {file.name} - {file.size} bytes
-            </li>
-        ));
+
         return (
-            <div className='modalStep2'>
-                <div className='information'><span>Information</span></div>
-                <div className="location">
-                    <img src={location}/><span style={{paddingLeft: 15}}>location (click on the big map)</span>
-                </div>
-                <form className='formReport' onSubmit={this.handleClick}>
-                    <div className='mapPin'>
-                        <MapComponentReport
-                        />
-                    </div>
-                    <div className='note-reportForm'><span className='spanNote'>Note: </span>
-                        <textarea
-                            className='textNote'
-                            type="text"
-                            value={note1.value}
-                            onChange={this.handleChange}
-                        />
-                    </div>
+            <>
+                <ModalReportView
+                    note1={note1}
+                    note2={note2}
+                    selectedOption={selectedOption}
+                    handleChange={this.handleChange}
+                    handleChangeSelectProblem={this.handleChangeSelectProblem}
+                    handleChangeDescription={this.handleChangeDescription}
+                    handleChangeStatus={this.handleChangeStatus}
+                    handleClick={this.handleClick}
+                    onClickCancel={this.props.onCancel}
 
-                    <div className='description'>
-                        <img src={pen}/><span style={{paddingLeft: 15}}>Description of the problem</span>
-                    </div>
-
-                    <Select
-                        className='selectProblem'
-                        onChange={this.handleChangeSelectProblem}
-                        options={options}
-                        styles={customStyles}
-                    />
-                    <div className='noteDescription'><span className='spanDescription'>Note: </span>
-                        <textarea
-                            className='textNoteDescription'
-                            type="text"
-                            value={note2.value}
-                            onChange={this.handleChangeDescription}
-                        />
-                    </div>
-                    <div className='addPhoto'>
-                        <img src={camera}/><span style={{paddingLeft: 15}}>Add photo</span>
-                        <div className='dropPhoto'>
-                            {/* {image.length > 0 ? <div>
-                                <h2>Uploading {image.length} files...</h2>
-                                <div>{image.map((file) => <img src={file.preview}/>)}</div>
-                            </div> : null}
-                            <Dropzone onDrop={this.onDrop} accept="image/png, image/gif, image/jpeg">
-                                {({getRootProps, getInputProps, isDragActive}) => (
-                                    <section className="container">
-                                        <div {...getRootProps({className: 'dropzone'})}>
-                                            <input {...getInputProps()} />
-                                            <p>Drag 'n' drop some files here, or click to select files</p>
-                                            {isDragActive ? "Drop it like it's hot!" : 'Click me or drag a file to upload!'}
-                                        </div>
-                                        <aside>
-                                            <h4>Files</h4>
-                                            <ul>{imagezone}</ul>
-                                        </aside>
-                                    </section>
-                                )}
-                            </Dropzone>*/}
-                            {/* <input type="file"
-                                       id="image"
-                                       accept="image/png, image/jpeg"  onChange={this.handleImageChange} />*/}
-
-                            <ImageUpload
-                                handleChangeStatus={this.handleChangeStatus}
-                                //handleSubmitDrop={this.handleSubmitDrop}
-                            />
-                        </div>
-                    </div>
-                    <button className='Btn-nextStepFinish' type='submit'>
-                        <p className='nameBtnSubmit'>Submit</p>
-                    </button>
-                </form>
-                <button
-                    className="modal-close"
-                    onClick={this.props.onCancel}
-                >
-                    <p>X</p>
-                </button>
-
+                />
                 {showModalGeo ? (<ModalGeo
                         onClose={this.closeModalGeo.bind(this)}
                     />
@@ -283,7 +215,7 @@ export default class ReportForm extends Component {
                         onClose={this.closeModalSelect.bind(this)}
                     />
                 ) : null}
-            </div>
+            </>
         );
     }
 }

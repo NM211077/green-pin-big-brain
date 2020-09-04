@@ -12,12 +12,14 @@ export function Navbar() {
     return (
         <div className="havbar">
             <ul className="navbar-title">
-                <li><Link to='/home'>Home</Link></li>
+                <li><Link className ="linkNav" to='/home'>Home</Link></li>
                 <li>Statistics</li>
                 <li>Volonteering</li>
+
             </ul>
             <div className="enter-login">
-                <div className="login"><Link to='/login'>
+                <div className={'donate'}><Link className ="linkNav" to='/donation'>DONATE</Link></div>
+                <div className="login"><Link className ="linkNav" to='/login'>
                     Log in</Link></div>
                 <div className="create-login">CREATE ACCOUNT</div>
             </div>

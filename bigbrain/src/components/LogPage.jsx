@@ -1,5 +1,7 @@
 import React, {Component, useState, useEffect, Fragment} from "react";
 import {Button, FormGroup, FormControl, FormLabel} from "react-bootstrap";
+import appStore from "../assets/img/appStore.png";
+import Play from "../assets/img/Play.png";
 import FrameLogIn from "../assets/img/FrameLogIn.png";
 import {Link, Redirect} from "react-router-dom";
 
@@ -15,7 +17,6 @@ export function LogInPage() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        console.log('login', email, password);
         fetch("https://cors-anywhere.herokuapp.com/https://arcane-eyrie-30848.herokuapp.com/api/v1/rest-auth/login/", {
             method: "POST",
             body: JSON.stringify({
@@ -108,6 +109,11 @@ export function LogInPage() {
                             Sign In</Link>
                         </button>
                     </form>
+                    <p className="qrInfo">We recommend you to download a Green Pin mobile app.</p>
+                    <div className="qrCode-zone">
+                        <button type="button" className="qrCode"><img src={appStore} alt="qrCodeAppStore" /></button>
+                        <button type="button" className="qrCode"><img src={Play} alt="qrCodePlayMarket" /></button>
+                    </div>
                 </div>
             </div>
             <img src={FrameLogIn} alt="img" className="FrameLogIn"/>

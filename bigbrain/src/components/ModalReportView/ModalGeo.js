@@ -1,18 +1,20 @@
 import React, {Component} from 'react';
 import './Modal.css';
+import Container from 'react-bootstrap/Container'
 
-class ModalGeo extends Component {
-    render() {
-        return (
-            <div className='modalGeo'>
+const ModalGeo = (props) => {
+    const {onClose} = props;
+    return (
+        <>
+            <Container className='modalGeo'>
                 <p className="modalStepGeo">Please select a place on the big map!!!
                 </p>
                 <button className="modal-close"
-                        onClick={this.props.onClose}>x
+                        onClick={onClose}>x
                 </button>
-            </div>
-        )
-    }
+            </Container>
+        </>
+    )
 }
 
 export default ModalGeo;
