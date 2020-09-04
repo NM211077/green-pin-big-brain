@@ -5,7 +5,7 @@ import camera from "./camera.png";
 //import './Modal.css';
 import ModalGeo from './ModalGeo.js';
 import ModalSelect from './ModalSelect.js';
-import ModalReportView from "../ModalReportTest/Modal.js"
+import ModalReportView from "../ModalReportComponent/Modal.js"
 import Select from 'react-select';
 import MapComponentReport from './MapComponentReport.js';
 import ImageUpload from './ImageUpload.js';
