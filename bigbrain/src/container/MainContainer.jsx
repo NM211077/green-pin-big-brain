@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import axios from "axios";
-import ReactModal from "react-modal";
 //import '../components/ModalReport/Modal.css';
-import ReportForm from '../components/ModalReport/ReportForm';
-import ModalFinish from '../components/ModalReport/ModalFinish';
-import InfoModal from '../components/ModalReport/InfoModal';
+import ReportForm from '../components/ModalReportView/ReportForm';
+import ModalFinish from '../components/ModalReportView/ModalFinish';
+import InfoModal from '../components/ModalReportView/InfoModal';
 import { BASE_URL } from "../constans";
 import { MapComponent, ButtonPlus } from "../components/index.js";
 
