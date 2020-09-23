@@ -5,14 +5,14 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import FormControl from 'react-bootstrap/FormControl'
-import pen from "../ModalReport/pen.png";
-import location from "../ModalReport/location.png";
-import camera from "../ModalReport/camera.png";
+import pen from "../ModalReportView/pen.png";
+import location from "../ModalReportView/location.png";
+import camera from "../ModalReportView/camera.png";
 import Select from 'react-select';
-import MapComponentReport from '../ModalReport/MapComponentReport.js';
-import ImageUpload from '../ModalReport/ImageUpload.js';
+import MapComponentReport from '../ModalReportView/MapComponentReport.js';
+import ImageUpload from '../ModalReportView/ImageUpload.js';
 
-let lat, lng, locationSubmit;
+
 const options = [
     {value: 'Chopping', label: 'Chopping', id: 1},
     {value: 'Garbage dump', label: 'Garbage dump', id: 2},

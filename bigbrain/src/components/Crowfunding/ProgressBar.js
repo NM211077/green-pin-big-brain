@@ -1,14 +1,14 @@
 import React from "react";
 
 const ProgressBar = () => {
-    const completed = 10;
+    const completed = 0;/*data from the server in perspective*/
     const containerStyles = {
         height: 64,
         width: '100%',
         backgroundColor: "#e0e0de",
         borderRadius: 20,
 
-    }
+    };
     const fillerStyles = {
         height: '100%',
         width: `${completed}%`,
@@ -16,7 +16,7 @@ const ProgressBar = () => {
         borderBottomLeftRadius: 20,
         borderTopLeftRadius: 20,
 
-    }
+    };
 
     /*const labelStyles = {
         padding: 5,

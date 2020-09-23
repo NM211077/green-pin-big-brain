@@ -1,38 +1,12 @@
 import React, {Component, Fragment} from 'react';
-import pen from "./pen.png";
-import location from "./location.png";
-import camera from "./camera.png";
-//import './Modal.css';
 import ModalGeo from './ModalGeo.js';
 import ModalSelect from './ModalSelect.js';
 import ModalReportView from "../ModalReportComponent/Modal.js"
-import Select from 'react-select';
-import MapComponentReport from './MapComponentReport.js';
-import ImageUpload from './ImageUpload.js';
-import axios from 'axios';
-import Dropzone from 'react-dropzone';
+
 
 
 let lat, lng, locationSubmit;
-/*const options = [
-    {value: 'Chopping', label: 'Chopping', id: 1},
-    {value: 'Garbage dump', label: 'Garbage dump', id: 2},
-    {value: 'Set fire to the grass', label: 'Set fire to the grass', id: 3},
-    {value: 'Fire', label: 'Fire', id: 4},
-    {value: 'Quarry (clay or sand mining)', label: 'Quarry (clay or sand mining)', id: 5},
-    {value: 'New development', label: 'New development', id: 6},
-    {value: 'Collection of rare plants', label: 'Collection of rare plants', id: 7},
-    {value: 'Poaching', label: 'Poaching', id: 8},
-    {value: 'Other', label: 'Other', id: 9},
-];
 
-const customStyles = {
-    option: (provided, state) => ({
-        ...provided,
-        color: state.isSelected ? 'white' : 'black',
-        background: state.isSelected ? '#78B0A0' : '#F7F7F7',
-    })
-};*/
 
 export default class ReportForm extends Component {
     constructor(props) {

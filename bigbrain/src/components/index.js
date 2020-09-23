@@ -6,5 +6,5 @@ export * from "./Navbar";
 export * from "./InfoIconProblem";
 export * from "./LogPage";
 export * from "./LogUpPage";
-export * from "./DonationPage";
-export * from "./ProgressBar";
+export * from "./Crowfunding/DonationPage";
+export * from "./Crowfunding/ProgressBar";
