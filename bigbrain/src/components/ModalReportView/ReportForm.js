@@ -178,7 +178,7 @@ export default class ReportForm extends Component {
                     handleChangeStatus={this.handleChangeStatus}
                     handleClick={this.handleClick}
                     onClickCancel={this.props.onCancel}
-
+                    onCloseReportForm={this.props}
                 />
                 {showModalGeo ? (<ModalGeo
                         onClose={this.closeModalGeo.bind(this)}

@@ -46,7 +46,8 @@ function ModalReportView(props) {
         borderRadius: 10
     };
     const {note1, note2,
-        handleChangeStatus, handleChange, handleChangeSelectProblem, handleChangeDescription, onClickCancel} = props;
+        handleChangeStatus, handleChange, handleChangeSelectProblem, handleChangeDescription, onClickCancel,handleClick,
+        onCloseReportForm} = props;
     return (
         <>
             <Container style={wrapContainer}>
@@ -127,7 +128,7 @@ function ModalReportView(props) {
                     </Col>
                 </Row>
                 <div>
-                    <Button className='Btn-submit-nextStepFinish' type="onClick" onClick={console.log(9999)}>
+                    <Button className='Btn-submit-nextStepFinish' type="onClick" onClick={handleClick}>
                         <p className='nameBtnSubmit'>Submit</p>
                     </Button>
                 </div>

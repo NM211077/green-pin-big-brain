@@ -6,13 +6,13 @@ const ModalGeo = (props) => {
     const {onClose} = props;
     return (
         <>
-            <Container className='modalGeo'>
+            <div className='modalGeo'>
                 <p className="modalStepGeo">Please select a place on the big map!!!
                 </p>
                 <button className="modal-close"
                         onClick={onClose}>x
                 </button>
-            </Container>
+            </div>
         </>
     )
 }

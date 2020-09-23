@@ -5,13 +5,13 @@ import Container from 'react-bootstrap/Container'
 const ModalSelect = (props) => {
     const {onClose} = props;
     return (
-        <Container className='modalSelect'>
+        <div className='modalSelect'>
             <p>Please select a type problem!!!
             </p>
             <button className="modal-close"
                     onClick={onClose}>x
             </button>
-        </Container>
+        </div>
     )
 }
 

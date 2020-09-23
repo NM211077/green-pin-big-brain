@@ -6,7 +6,7 @@ const ModalFinish = (props) => {
     const {onClose, onCrossToReport} = props;
     return (
         <>
-            <Container className="modalFinish">
+            <Container className="modalStep">
                 <p className='modalFinishText'>Your request are successfully saved
                 </p>
                 <button className="modal-close"
